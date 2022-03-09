@@ -1,0 +1,827 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DSFEBABR2022.BO.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Ciudadano">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="450" Nullable="false" />
+          <Property Name="Secuencia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NoCedula" Type="varchar" MaxLength="11" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="35" Nullable="false" />
+          <Property Name="Apellido1" Type="varchar" MaxLength="35" Nullable="false" />
+          <Property Name="Apellido2" Type="varchar" MaxLength="35" />
+          <Property Name="OcupacionId" Type="int" />
+          <Property Name="TipoDeSangreId" Type="int" />
+          <Property Name="Sexo" Type="char" MaxLength="1" />
+          <Property Name="LugarDeNacimientoId" Type="int" />
+          <Property Name="FechaDeNacimiento" Type="date" />
+          <Property Name="FechaDeExpiracion" Type="date" />
+          <Property Name="NacionalidadId" Type="int" />
+          <Property Name="EstadoCivilId" Type="int" />
+          <Property Name="Firma" Type="varchar(max)" />
+          <Property Name="ColegioElectoralId" Type="int" />
+          <Property Name="Foto" Type="varchar(max)" />
+          <Property Name="Direccion" Type="varchar" MaxLength="70" />
+          <Property Name="CodigoPostal" Type="varchar" MaxLength="6" />
+          <Property Name="RegistroDeNacimiento" Type="varchar" MaxLength="50" />
+          <Property Name="EstadoId" Type="int" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+          <Property Name="UsuarioCreacionId" Type="nvarchar" MaxLength="450" />
+        </EntityType>
+        <EntityType Name="CiudadanoEstado">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="128" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="255" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ColegioElectoral">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Codigo" Type="nchar" MaxLength="10" />
+          <Property Name="Nombre" Type="varchar" MaxLength="128" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="255" />
+          <Property Name="Direccion" Type="varchar" MaxLength="70" />
+          <Property Name="Telefono" Type="varchar" MaxLength="10" />
+          <Property Name="MunicipioId" Type="nchar" MaxLength="10" />
+          <Property Name="SectorId" Type="nchar" MaxLength="10" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EstadoCivil">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="128" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="255" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Municipio">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProvinciaId" Type="int" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="128" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="255" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Nacionalidad">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="128" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="255" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Ocupacion">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="128" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="255" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Provincia">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="128" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="255" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sector">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MunicipioId" Type="int" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="128" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="255" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TipoDeSangre">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="128" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="255" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="450" Nullable="false" />
+          <Property Name="Usuario" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Clave" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CorreoElectronico" Type="varchar" MaxLength="254" />
+          <Property Name="Estado" Type="bit" Nullable="false" />
+          <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Ciudadano_CiudadanoEstado">
+          <End Role="CiudadanoEstado" Type="Self.CiudadanoEstado" Multiplicity="0..1" />
+          <End Role="Ciudadano" Type="Self.Ciudadano" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CiudadanoEstado">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Ciudadano">
+              <PropertyRef Name="EstadoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ciudadano_ColegioElectoral">
+          <End Role="ColegioElectoral" Type="Self.ColegioElectoral" Multiplicity="0..1" />
+          <End Role="Ciudadano" Type="Self.Ciudadano" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ColegioElectoral">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Ciudadano">
+              <PropertyRef Name="ColegioElectoralId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ciudadano_EstadoCivil">
+          <End Role="EstadoCivil" Type="Self.EstadoCivil" Multiplicity="0..1" />
+          <End Role="Ciudadano" Type="Self.Ciudadano" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EstadoCivil">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Ciudadano">
+              <PropertyRef Name="EstadoCivilId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ciudadano_Nacionalidad">
+          <End Role="Nacionalidad" Type="Self.Nacionalidad" Multiplicity="0..1" />
+          <End Role="Ciudadano" Type="Self.Ciudadano" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nacionalidad">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Ciudadano">
+              <PropertyRef Name="NacionalidadId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ciudadano_Ocupacion">
+          <End Role="Ocupacion" Type="Self.Ocupacion" Multiplicity="0..1" />
+          <End Role="Ciudadano" Type="Self.Ciudadano" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ocupacion">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Ciudadano">
+              <PropertyRef Name="OcupacionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ciudadano_Provincia">
+          <End Role="Provincia" Type="Self.Provincia" Multiplicity="0..1" />
+          <End Role="Ciudadano" Type="Self.Ciudadano" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Provincia">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Ciudadano">
+              <PropertyRef Name="LugarDeNacimientoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ciudadano_TipoDeSangre">
+          <End Role="TipoDeSangre" Type="Self.TipoDeSangre" Multiplicity="0..1" />
+          <End Role="Ciudadano" Type="Self.Ciudadano" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoDeSangre">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Ciudadano">
+              <PropertyRef Name="TipoDeSangreId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ciudadano_Usuario">
+          <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+          <End Role="Ciudadano" Type="Self.Ciudadano" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Ciudadano">
+              <PropertyRef Name="UsuarioCreacionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Municipio_Provincia">
+          <End Role="Provincia" Type="Self.Provincia" Multiplicity="1" />
+          <End Role="Municipio" Type="Self.Municipio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Provincia">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Municipio">
+              <PropertyRef Name="ProvinciaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sector_Municipio">
+          <End Role="Municipio" Type="Self.Municipio" Multiplicity="1" />
+          <End Role="Sector" Type="Self.Sector" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Municipio">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Sector">
+              <PropertyRef Name="MunicipioId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DSFEBABR2022BOStoreContainer">
+          <EntitySet Name="Ciudadano" EntityType="Self.Ciudadano" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CiudadanoEstado" EntityType="Self.CiudadanoEstado" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ColegioElectoral" EntityType="Self.ColegioElectoral" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EstadoCivil" EntityType="Self.EstadoCivil" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Municipio" EntityType="Self.Municipio" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Nacionalidad" EntityType="Self.Nacionalidad" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Ocupacion" EntityType="Self.Ocupacion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Provincia" EntityType="Self.Provincia" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sector" EntityType="Self.Sector" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TipoDeSangre" EntityType="Self.TipoDeSangre" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Ciudadano_CiudadanoEstado" Association="Self.FK_Ciudadano_CiudadanoEstado">
+            <End Role="CiudadanoEstado" EntitySet="CiudadanoEstado" />
+            <End Role="Ciudadano" EntitySet="Ciudadano" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ciudadano_ColegioElectoral" Association="Self.FK_Ciudadano_ColegioElectoral">
+            <End Role="ColegioElectoral" EntitySet="ColegioElectoral" />
+            <End Role="Ciudadano" EntitySet="Ciudadano" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ciudadano_EstadoCivil" Association="Self.FK_Ciudadano_EstadoCivil">
+            <End Role="EstadoCivil" EntitySet="EstadoCivil" />
+            <End Role="Ciudadano" EntitySet="Ciudadano" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ciudadano_Nacionalidad" Association="Self.FK_Ciudadano_Nacionalidad">
+            <End Role="Nacionalidad" EntitySet="Nacionalidad" />
+            <End Role="Ciudadano" EntitySet="Ciudadano" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ciudadano_Ocupacion" Association="Self.FK_Ciudadano_Ocupacion">
+            <End Role="Ocupacion" EntitySet="Ocupacion" />
+            <End Role="Ciudadano" EntitySet="Ciudadano" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ciudadano_Provincia" Association="Self.FK_Ciudadano_Provincia">
+            <End Role="Provincia" EntitySet="Provincia" />
+            <End Role="Ciudadano" EntitySet="Ciudadano" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ciudadano_TipoDeSangre" Association="Self.FK_Ciudadano_TipoDeSangre">
+            <End Role="TipoDeSangre" EntitySet="TipoDeSangre" />
+            <End Role="Ciudadano" EntitySet="Ciudadano" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ciudadano_Usuario" Association="Self.FK_Ciudadano_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Ciudadano" EntitySet="Ciudadano" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Municipio_Provincia" Association="Self.FK_Municipio_Provincia">
+            <End Role="Provincia" EntitySet="Provincia" />
+            <End Role="Municipio" EntitySet="Municipio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sector_Municipio" Association="Self.FK_Sector_Municipio">
+            <End Role="Municipio" EntitySet="Municipio" />
+            <End Role="Sector" EntitySet="Sector" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DSFEBABR2022.BO" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Ciudadano">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="450" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Secuencia" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NoCedula" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="35" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Apellido1" Type="String" MaxLength="35" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Apellido2" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+          <Property Name="OcupacionId" Type="Int32" />
+          <Property Name="TipoDeSangreId" Type="Int32" />
+          <Property Name="Sexo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="LugarDeNacimientoId" Type="Int32" />
+          <Property Name="FechaDeNacimiento" Type="DateTime" Precision="0" />
+          <Property Name="FechaDeExpiracion" Type="DateTime" Precision="0" />
+          <Property Name="NacionalidadId" Type="Int32" />
+          <Property Name="EstadoCivilId" Type="Int32" />
+          <Property Name="Firma" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ColegioElectoralId" Type="Int32" />
+          <Property Name="Foto" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Direccion" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="CodigoPostal" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="RegistroDeNacimiento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EstadoId" Type="Int32" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UsuarioCreacionId" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CiudadanoEstado" Relationship="Self.FK_Ciudadano_CiudadanoEstado" FromRole="Ciudadano" ToRole="CiudadanoEstado" />
+          <NavigationProperty Name="ColegioElectoral" Relationship="Self.FK_Ciudadano_ColegioElectoral" FromRole="Ciudadano" ToRole="ColegioElectoral" />
+          <NavigationProperty Name="EstadoCivil" Relationship="Self.FK_Ciudadano_EstadoCivil" FromRole="Ciudadano" ToRole="EstadoCivil" />
+          <NavigationProperty Name="Nacionalidad" Relationship="Self.FK_Ciudadano_Nacionalidad" FromRole="Ciudadano" ToRole="Nacionalidad" />
+          <NavigationProperty Name="Ocupacion" Relationship="Self.FK_Ciudadano_Ocupacion" FromRole="Ciudadano" ToRole="Ocupacion" />
+          <NavigationProperty Name="Provincia" Relationship="Self.FK_Ciudadano_Provincia" FromRole="Ciudadano" ToRole="Provincia" />
+          <NavigationProperty Name="TipoDeSangre" Relationship="Self.FK_Ciudadano_TipoDeSangre" FromRole="Ciudadano" ToRole="TipoDeSangre" />
+          <NavigationProperty Name="Usuario" Relationship="Self.FK_Ciudadano_Usuario" FromRole="Ciudadano" ToRole="Usuario" />
+        </EntityType>
+        <EntityType Name="CiudadanoEstado">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Ciudadano" Relationship="Self.FK_Ciudadano_CiudadanoEstado" FromRole="CiudadanoEstado" ToRole="Ciudadano" />
+        </EntityType>
+        <EntityType Name="ColegioElectoral">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Codigo" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Nombre" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Direccion" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="Telefono" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="MunicipioId" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="SectorId" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Ciudadano" Relationship="Self.FK_Ciudadano_ColegioElectoral" FromRole="ColegioElectoral" ToRole="Ciudadano" />
+        </EntityType>
+        <EntityType Name="EstadoCivil">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Ciudadano" Relationship="Self.FK_Ciudadano_EstadoCivil" FromRole="EstadoCivil" ToRole="Ciudadano" />
+        </EntityType>
+        <EntityType Name="Municipio">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProvinciaId" Type="Int32" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Provincia" Relationship="Self.FK_Municipio_Provincia" FromRole="Municipio" ToRole="Provincia" />
+          <NavigationProperty Name="Sector" Relationship="Self.FK_Sector_Municipio" FromRole="Municipio" ToRole="Sector" />
+        </EntityType>
+        <EntityType Name="Nacionalidad">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Ciudadano" Relationship="Self.FK_Ciudadano_Nacionalidad" FromRole="Nacionalidad" ToRole="Ciudadano" />
+        </EntityType>
+        <EntityType Name="Ocupacion">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Ciudadano" Relationship="Self.FK_Ciudadano_Ocupacion" FromRole="Ocupacion" ToRole="Ciudadano" />
+        </EntityType>
+        <EntityType Name="Provincia">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Ciudadano" Relationship="Self.FK_Ciudadano_Provincia" FromRole="Provincia" ToRole="Ciudadano" />
+          <NavigationProperty Name="Municipio" Relationship="Self.FK_Municipio_Provincia" FromRole="Provincia" ToRole="Municipio" />
+        </EntityType>
+        <EntityType Name="Sector">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MunicipioId" Type="Int32" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Municipio" Relationship="Self.FK_Sector_Municipio" FromRole="Sector" ToRole="Municipio" />
+        </EntityType>
+        <EntityType Name="TipoDeSangre">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Ciudadano" Relationship="Self.FK_Ciudadano_TipoDeSangre" FromRole="TipoDeSangre" ToRole="Ciudadano" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="450" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Usuario1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Clave" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CorreoElectronico" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Boolean" Nullable="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Ciudadano" Relationship="Self.FK_Ciudadano_Usuario" FromRole="Usuario" ToRole="Ciudadano" />
+        </EntityType>
+        <Association Name="FK_Ciudadano_CiudadanoEstado">
+          <End Role="CiudadanoEstado" Type="Self.CiudadanoEstado" Multiplicity="0..1" />
+          <End Role="Ciudadano" Type="Self.Ciudadano" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CiudadanoEstado">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Ciudadano">
+              <PropertyRef Name="EstadoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ciudadano_ColegioElectoral">
+          <End Role="ColegioElectoral" Type="Self.ColegioElectoral" Multiplicity="0..1" />
+          <End Role="Ciudadano" Type="Self.Ciudadano" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ColegioElectoral">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Ciudadano">
+              <PropertyRef Name="ColegioElectoralId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ciudadano_EstadoCivil">
+          <End Role="EstadoCivil" Type="Self.EstadoCivil" Multiplicity="0..1" />
+          <End Role="Ciudadano" Type="Self.Ciudadano" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EstadoCivil">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Ciudadano">
+              <PropertyRef Name="EstadoCivilId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ciudadano_Nacionalidad">
+          <End Role="Nacionalidad" Type="Self.Nacionalidad" Multiplicity="0..1" />
+          <End Role="Ciudadano" Type="Self.Ciudadano" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nacionalidad">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Ciudadano">
+              <PropertyRef Name="NacionalidadId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ciudadano_Ocupacion">
+          <End Role="Ocupacion" Type="Self.Ocupacion" Multiplicity="0..1" />
+          <End Role="Ciudadano" Type="Self.Ciudadano" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ocupacion">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Ciudadano">
+              <PropertyRef Name="OcupacionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ciudadano_Provincia">
+          <End Role="Provincia" Type="Self.Provincia" Multiplicity="0..1" />
+          <End Role="Ciudadano" Type="Self.Ciudadano" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Provincia">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Ciudadano">
+              <PropertyRef Name="LugarDeNacimientoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ciudadano_TipoDeSangre">
+          <End Role="TipoDeSangre" Type="Self.TipoDeSangre" Multiplicity="0..1" />
+          <End Role="Ciudadano" Type="Self.Ciudadano" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoDeSangre">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Ciudadano">
+              <PropertyRef Name="TipoDeSangreId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ciudadano_Usuario">
+          <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+          <End Role="Ciudadano" Type="Self.Ciudadano" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Ciudadano">
+              <PropertyRef Name="UsuarioCreacionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Municipio_Provincia">
+          <End Role="Provincia" Type="Self.Provincia" Multiplicity="1" />
+          <End Role="Municipio" Type="Self.Municipio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Provincia">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Municipio">
+              <PropertyRef Name="ProvinciaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sector_Municipio">
+          <End Role="Municipio" Type="Self.Municipio" Multiplicity="1" />
+          <End Role="Sector" Type="Self.Sector" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Municipio">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Sector">
+              <PropertyRef Name="MunicipioId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DSFEBABR2022Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Ciudadano" EntityType="Self.Ciudadano" />
+          <EntitySet Name="CiudadanoEstado" EntityType="Self.CiudadanoEstado" />
+          <EntitySet Name="ColegioElectoral" EntityType="Self.ColegioElectoral" />
+          <EntitySet Name="EstadoCivil" EntityType="Self.EstadoCivil" />
+          <EntitySet Name="Municipio" EntityType="Self.Municipio" />
+          <EntitySet Name="Nacionalidad" EntityType="Self.Nacionalidad" />
+          <EntitySet Name="Ocupacion" EntityType="Self.Ocupacion" />
+          <EntitySet Name="Provincia" EntityType="Self.Provincia" />
+          <EntitySet Name="Sector" EntityType="Self.Sector" />
+          <EntitySet Name="TipoDeSangre" EntityType="Self.TipoDeSangre" />
+          <EntitySet Name="Usuario" EntityType="Self.Usuario" />
+          <AssociationSet Name="FK_Ciudadano_CiudadanoEstado" Association="Self.FK_Ciudadano_CiudadanoEstado">
+            <End Role="CiudadanoEstado" EntitySet="CiudadanoEstado" />
+            <End Role="Ciudadano" EntitySet="Ciudadano" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ciudadano_ColegioElectoral" Association="Self.FK_Ciudadano_ColegioElectoral">
+            <End Role="ColegioElectoral" EntitySet="ColegioElectoral" />
+            <End Role="Ciudadano" EntitySet="Ciudadano" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ciudadano_EstadoCivil" Association="Self.FK_Ciudadano_EstadoCivil">
+            <End Role="EstadoCivil" EntitySet="EstadoCivil" />
+            <End Role="Ciudadano" EntitySet="Ciudadano" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ciudadano_Nacionalidad" Association="Self.FK_Ciudadano_Nacionalidad">
+            <End Role="Nacionalidad" EntitySet="Nacionalidad" />
+            <End Role="Ciudadano" EntitySet="Ciudadano" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ciudadano_Ocupacion" Association="Self.FK_Ciudadano_Ocupacion">
+            <End Role="Ocupacion" EntitySet="Ocupacion" />
+            <End Role="Ciudadano" EntitySet="Ciudadano" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ciudadano_Provincia" Association="Self.FK_Ciudadano_Provincia">
+            <End Role="Provincia" EntitySet="Provincia" />
+            <End Role="Ciudadano" EntitySet="Ciudadano" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ciudadano_TipoDeSangre" Association="Self.FK_Ciudadano_TipoDeSangre">
+            <End Role="TipoDeSangre" EntitySet="TipoDeSangre" />
+            <End Role="Ciudadano" EntitySet="Ciudadano" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ciudadano_Usuario" Association="Self.FK_Ciudadano_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Ciudadano" EntitySet="Ciudadano" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Municipio_Provincia" Association="Self.FK_Municipio_Provincia">
+            <End Role="Provincia" EntitySet="Provincia" />
+            <End Role="Municipio" EntitySet="Municipio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sector_Municipio" Association="Self.FK_Sector_Municipio">
+            <End Role="Municipio" EntitySet="Municipio" />
+            <End Role="Sector" EntitySet="Sector" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DSFEBABR2022BOStoreContainer" CdmEntityContainer="DSFEBABR2022Entities">
+          <EntitySetMapping Name="Ciudadano">
+            <EntityTypeMapping TypeName="DSFEBABR2022.BO.Ciudadano">
+              <MappingFragment StoreEntitySet="Ciudadano">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Secuencia" ColumnName="Secuencia" />
+                <ScalarProperty Name="NoCedula" ColumnName="NoCedula" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Apellido1" ColumnName="Apellido1" />
+                <ScalarProperty Name="Apellido2" ColumnName="Apellido2" />
+                <ScalarProperty Name="OcupacionId" ColumnName="OcupacionId" />
+                <ScalarProperty Name="TipoDeSangreId" ColumnName="TipoDeSangreId" />
+                <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+                <ScalarProperty Name="LugarDeNacimientoId" ColumnName="LugarDeNacimientoId" />
+                <ScalarProperty Name="FechaDeNacimiento" ColumnName="FechaDeNacimiento" />
+                <ScalarProperty Name="FechaDeExpiracion" ColumnName="FechaDeExpiracion" />
+                <ScalarProperty Name="NacionalidadId" ColumnName="NacionalidadId" />
+                <ScalarProperty Name="EstadoCivilId" ColumnName="EstadoCivilId" />
+                <ScalarProperty Name="Firma" ColumnName="Firma" />
+                <ScalarProperty Name="ColegioElectoralId" ColumnName="ColegioElectoralId" />
+                <ScalarProperty Name="Foto" ColumnName="Foto" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="CodigoPostal" ColumnName="CodigoPostal" />
+                <ScalarProperty Name="RegistroDeNacimiento" ColumnName="RegistroDeNacimiento" />
+                <ScalarProperty Name="EstadoId" ColumnName="EstadoId" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="UsuarioCreacionId" ColumnName="UsuarioCreacionId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CiudadanoEstado">
+            <EntityTypeMapping TypeName="DSFEBABR2022.BO.CiudadanoEstado">
+              <MappingFragment StoreEntitySet="CiudadanoEstado">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ColegioElectoral">
+            <EntityTypeMapping TypeName="DSFEBABR2022.BO.ColegioElectoral">
+              <MappingFragment StoreEntitySet="ColegioElectoral">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="MunicipioId" ColumnName="MunicipioId" />
+                <ScalarProperty Name="SectorId" ColumnName="SectorId" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EstadoCivil">
+            <EntityTypeMapping TypeName="DSFEBABR2022.BO.EstadoCivil">
+              <MappingFragment StoreEntitySet="EstadoCivil">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Municipio">
+            <EntityTypeMapping TypeName="DSFEBABR2022.BO.Municipio">
+              <MappingFragment StoreEntitySet="Municipio">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ProvinciaId" ColumnName="ProvinciaId" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Nacionalidad">
+            <EntityTypeMapping TypeName="DSFEBABR2022.BO.Nacionalidad">
+              <MappingFragment StoreEntitySet="Nacionalidad">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ocupacion">
+            <EntityTypeMapping TypeName="DSFEBABR2022.BO.Ocupacion">
+              <MappingFragment StoreEntitySet="Ocupacion">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Provincia">
+            <EntityTypeMapping TypeName="DSFEBABR2022.BO.Provincia">
+              <MappingFragment StoreEntitySet="Provincia">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sector">
+            <EntityTypeMapping TypeName="DSFEBABR2022.BO.Sector">
+              <MappingFragment StoreEntitySet="Sector">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="MunicipioId" ColumnName="MunicipioId" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoDeSangre">
+            <EntityTypeMapping TypeName="DSFEBABR2022.BO.TipoDeSangre">
+              <MappingFragment StoreEntitySet="TipoDeSangre">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Usuario">
+            <EntityTypeMapping TypeName="DSFEBABR2022.BO.Usuario">
+              <MappingFragment StoreEntitySet="Usuario">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Usuario1" ColumnName="Usuario" />
+                <ScalarProperty Name="Clave" ColumnName="Clave" />
+                <ScalarProperty Name="CorreoElectronico" ColumnName="CorreoElectronico" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

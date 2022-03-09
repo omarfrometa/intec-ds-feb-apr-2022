@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="29ddd3ac0b17429ca90052d10d34c287" Name="Diagram1">
+        <EntityTypeShape EntityType="DSFEBABR2022.BO.Ciudadano" Width="1.5" PointX="6.25" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DSFEBABR2022.BO.CiudadanoEstado" Width="1.5" PointX="0.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DSFEBABR2022.BO.ColegioElectoral" Width="1.5" PointX="0.75" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DSFEBABR2022.BO.EstadoCivil" Width="1.5" PointX="0.75" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DSFEBABR2022.BO.Municipio" Width="1.5" PointX="3" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DSFEBABR2022.BO.Nacionalidad" Width="1.5" PointX="0.75" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DSFEBABR2022.BO.Ocupacion" Width="1.5" PointX="0.75" PointY="22" IsExpanded="true" />
+        <EntityTypeShape EntityType="DSFEBABR2022.BO.Provincia" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DSFEBABR2022.BO.Sector" Width="1.5" PointX="5.25" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="DSFEBABR2022.BO.TipoDeSangre" Width="1.5" PointX="0.75" PointY="25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DSFEBABR2022.BO.Usuario" Width="1.5" PointX="0.75" PointY="27.875" IsExpanded="true" />
+        <AssociationConnector Association="DSFEBABR2022.BO.FK_Ciudadano_CiudadanoEstado" ManuallyRouted="false" />
+        <AssociationConnector Association="DSFEBABR2022.BO.FK_Ciudadano_ColegioElectoral" ManuallyRouted="false" />
+        <AssociationConnector Association="DSFEBABR2022.BO.FK_Ciudadano_EstadoCivil" ManuallyRouted="false" />
+        <AssociationConnector Association="DSFEBABR2022.BO.FK_Ciudadano_Nacionalidad" ManuallyRouted="false" />
+        <AssociationConnector Association="DSFEBABR2022.BO.FK_Ciudadano_Ocupacion" ManuallyRouted="false" />
+        <AssociationConnector Association="DSFEBABR2022.BO.FK_Ciudadano_Provincia" ManuallyRouted="false" />
+        <AssociationConnector Association="DSFEBABR2022.BO.FK_Ciudadano_TipoDeSangre" ManuallyRouted="false" />
+        <AssociationConnector Association="DSFEBABR2022.BO.FK_Ciudadano_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="DSFEBABR2022.BO.FK_Municipio_Provincia" ManuallyRouted="false" />
+        <AssociationConnector Association="DSFEBABR2022.BO.FK_Sector_Municipio" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
