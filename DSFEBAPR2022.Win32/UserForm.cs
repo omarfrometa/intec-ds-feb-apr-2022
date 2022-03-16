@@ -46,7 +46,7 @@ namespace DSFEBAPR2022.Win32
             {
                 Id = txtID.Text,
                 Usuario1 = txtUsername.Text,
-                Clave = txtPassword.Text,
+                Clave = BO.Helpers.Utils.MD5Hash(txtPassword.Text),
                 CorreoElectronico = txtEmail.Text,
                 Estado = chkEnabled.Checked,
                 FechaCreacion = DateTime.Now

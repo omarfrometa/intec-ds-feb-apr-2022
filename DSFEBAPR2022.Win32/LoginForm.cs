@@ -31,7 +31,8 @@ namespace DSFEBAPR2022.Win32
 
         private void DoLogin()
         {
-            var user = db.Usuario.FirstOrDefault(x => x.Usuario1 == txtUsuario.Text.Trim() && x.Clave == txtClave.Text.Trim());
+            var pwd = BO.Helpers.Utils.MD5Hash(txtClave.Text);
+            var user = db.Usuario.FirstOrDefault(x => x.Usuario1 == txtUsuario.Text.Trim() && x.Clave == pwd);
             if (user == null)
             {
                 MessageBox.Show("Credenciales Invalidas.");
@@ -52,9 +53,10 @@ namespace DSFEBAPR2022.Win32
             {
                 StreamWriter sw = new StreamWriter(ExecutePath + "\\config.txt");
                 sw.WriteLine(txtUsuario.Text);
-                sw.WriteLine(txtClave.Text);
+                sw.WriteLine(BO.Helpers.Utils.MD5Hash(txtClave.Text));
                 sw.Close();
             }
+            else
             {
                 File.Delete(ExecutePath + "\\config.txt");
             }

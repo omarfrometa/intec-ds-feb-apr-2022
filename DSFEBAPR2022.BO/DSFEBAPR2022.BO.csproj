@@ -83,6 +83,7 @@
     <Compile Include="EstadoCivil.cs">
       <DependentUpon>db.tt</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\Utils.cs" />
     <Compile Include="Municipio.cs">
       <DependentUpon>db.tt</DependentUpon>
     </Compile>

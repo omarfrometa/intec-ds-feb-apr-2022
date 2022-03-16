@@ -36,6 +36,7 @@ namespace DSFEBAPR2022.Win32
             this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.undoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,23 +47,25 @@ namespace DSFEBAPR2022.Win32
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.customizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.administracionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ciudadanosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.colegiosElectoralesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mantenimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.estadoCiudadanoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.municipiosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nacionalidadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ocupacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.provinciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tiposDeSangreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sectoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.indexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mantenimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.estadoCiudadanoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.provinciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.municipiosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nacionalidadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ocupacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sectoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tiposDeSangreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.administracionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ciudadanosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
@@ -84,9 +87,11 @@ namespace DSFEBAPR2022.Win32
             this.cutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.colegiosElectoralesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
-            this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ventanasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cascadaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.horizontalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verticalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.iconosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -101,6 +106,7 @@ namespace DSFEBAPR2022.Win32
             this.toolsToolStripMenuItem,
             this.administracionToolStripMenuItem,
             this.mantenimientosToolStripMenuItem,
+            this.ventanasToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -129,28 +135,35 @@ namespace DSFEBAPR2022.Win32
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator.Size = new System.Drawing.Size(199, 6);
             // 
             // saveAsToolStripMenuItem
             // 
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(202, 26);
             this.saveAsToolStripMenuItem.Text = "Save &As";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(199, 6);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(199, 6);
+            // 
+            // cerrarSesiónToolStripMenuItem
+            // 
+            this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(202, 26);
+            this.cerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión";
+            this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(202, 26);
             this.exitToolStripMenuItem.Text = "Salir del Sistema";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -186,12 +199,12 @@ namespace DSFEBAPR2022.Win32
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(176, 6);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(176, 6);
             // 
             // selectAllToolStripMenuItem
             // 
@@ -219,6 +232,98 @@ namespace DSFEBAPR2022.Win32
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
             this.optionsToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.optionsToolStripMenuItem.Text = "&Options";
+            // 
+            // administracionToolStripMenuItem
+            // 
+            this.administracionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ciudadanosToolStripMenuItem,
+            this.colegiosElectoralesToolStripMenuItem,
+            this.toolStripSeparator8,
+            this.usuariosToolStripMenuItem});
+            this.administracionToolStripMenuItem.Name = "administracionToolStripMenuItem";
+            this.administracionToolStripMenuItem.Size = new System.Drawing.Size(123, 24);
+            this.administracionToolStripMenuItem.Text = "Administracion";
+            // 
+            // ciudadanosToolStripMenuItem
+            // 
+            this.ciudadanosToolStripMenuItem.Name = "ciudadanosToolStripMenuItem";
+            this.ciudadanosToolStripMenuItem.Size = new System.Drawing.Size(226, 26);
+            this.ciudadanosToolStripMenuItem.Text = "Ciudadanos";
+            // 
+            // colegiosElectoralesToolStripMenuItem
+            // 
+            this.colegiosElectoralesToolStripMenuItem.Name = "colegiosElectoralesToolStripMenuItem";
+            this.colegiosElectoralesToolStripMenuItem.Size = new System.Drawing.Size(226, 26);
+            this.colegiosElectoralesToolStripMenuItem.Text = "Colegios Electorales";
+            // 
+            // toolStripSeparator8
+            // 
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(223, 6);
+            // 
+            // usuariosToolStripMenuItem
+            // 
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(226, 26);
+            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
+            // 
+            // mantenimientosToolStripMenuItem
+            // 
+            this.mantenimientosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.estadoCiudadanoToolStripMenuItem,
+            this.municipiosToolStripMenuItem,
+            this.nacionalidadToolStripMenuItem,
+            this.ocupacionesToolStripMenuItem,
+            this.provinciaToolStripMenuItem,
+            this.tiposDeSangreToolStripMenuItem,
+            this.sectoresToolStripMenuItem});
+            this.mantenimientosToolStripMenuItem.Name = "mantenimientosToolStripMenuItem";
+            this.mantenimientosToolStripMenuItem.Size = new System.Drawing.Size(130, 24);
+            this.mantenimientosToolStripMenuItem.Text = "Mantenimientos";
+            // 
+            // estadoCiudadanoToolStripMenuItem
+            // 
+            this.estadoCiudadanoToolStripMenuItem.Name = "estadoCiudadanoToolStripMenuItem";
+            this.estadoCiudadanoToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
+            this.estadoCiudadanoToolStripMenuItem.Text = "Estados Ciudadanos";
+            // 
+            // municipiosToolStripMenuItem
+            // 
+            this.municipiosToolStripMenuItem.Name = "municipiosToolStripMenuItem";
+            this.municipiosToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
+            this.municipiosToolStripMenuItem.Text = "Municipios";
+            // 
+            // nacionalidadToolStripMenuItem
+            // 
+            this.nacionalidadToolStripMenuItem.Name = "nacionalidadToolStripMenuItem";
+            this.nacionalidadToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
+            this.nacionalidadToolStripMenuItem.Text = "Nacionalidades";
+            // 
+            // ocupacionesToolStripMenuItem
+            // 
+            this.ocupacionesToolStripMenuItem.Name = "ocupacionesToolStripMenuItem";
+            this.ocupacionesToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
+            this.ocupacionesToolStripMenuItem.Text = "Ocupaciones";
+            this.ocupacionesToolStripMenuItem.Click += new System.EventHandler(this.ocupacionesToolStripMenuItem_Click);
+            // 
+            // provinciaToolStripMenuItem
+            // 
+            this.provinciaToolStripMenuItem.Name = "provinciaToolStripMenuItem";
+            this.provinciaToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
+            this.provinciaToolStripMenuItem.Text = "Provincias";
+            // 
+            // tiposDeSangreToolStripMenuItem
+            // 
+            this.tiposDeSangreToolStripMenuItem.Name = "tiposDeSangreToolStripMenuItem";
+            this.tiposDeSangreToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
+            this.tiposDeSangreToolStripMenuItem.Text = "Tipos de Sangre";
+            // 
+            // sectoresToolStripMenuItem
+            // 
+            this.sectoresToolStripMenuItem.Name = "sectoresToolStripMenuItem";
+            this.sectoresToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
+            this.sectoresToolStripMenuItem.Text = "Sectores";
             // 
             // helpToolStripMenuItem
             // 
@@ -253,93 +358,13 @@ namespace DSFEBAPR2022.Win32
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(185, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(147, 6);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
             this.aboutToolStripMenuItem.Text = "&About...";
-            // 
-            // mantenimientosToolStripMenuItem
-            // 
-            this.mantenimientosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.estadoCiudadanoToolStripMenuItem,
-            this.municipiosToolStripMenuItem,
-            this.nacionalidadToolStripMenuItem,
-            this.ocupacionesToolStripMenuItem,
-            this.provinciaToolStripMenuItem,
-            this.tiposDeSangreToolStripMenuItem,
-            this.sectoresToolStripMenuItem});
-            this.mantenimientosToolStripMenuItem.Name = "mantenimientosToolStripMenuItem";
-            this.mantenimientosToolStripMenuItem.Size = new System.Drawing.Size(130, 24);
-            this.mantenimientosToolStripMenuItem.Text = "Mantenimientos";
-            // 
-            // estadoCiudadanoToolStripMenuItem
-            // 
-            this.estadoCiudadanoToolStripMenuItem.Name = "estadoCiudadanoToolStripMenuItem";
-            this.estadoCiudadanoToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
-            this.estadoCiudadanoToolStripMenuItem.Text = "Estados Ciudadanos";
-            // 
-            // provinciaToolStripMenuItem
-            // 
-            this.provinciaToolStripMenuItem.Name = "provinciaToolStripMenuItem";
-            this.provinciaToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
-            this.provinciaToolStripMenuItem.Text = "Provincias";
-            // 
-            // municipiosToolStripMenuItem
-            // 
-            this.municipiosToolStripMenuItem.Name = "municipiosToolStripMenuItem";
-            this.municipiosToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
-            this.municipiosToolStripMenuItem.Text = "Municipios";
-            // 
-            // nacionalidadToolStripMenuItem
-            // 
-            this.nacionalidadToolStripMenuItem.Name = "nacionalidadToolStripMenuItem";
-            this.nacionalidadToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
-            this.nacionalidadToolStripMenuItem.Text = "Nacionalidades";
-            // 
-            // ocupacionesToolStripMenuItem
-            // 
-            this.ocupacionesToolStripMenuItem.Name = "ocupacionesToolStripMenuItem";
-            this.ocupacionesToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
-            this.ocupacionesToolStripMenuItem.Text = "Ocupaciones";
-            // 
-            // sectoresToolStripMenuItem
-            // 
-            this.sectoresToolStripMenuItem.Name = "sectoresToolStripMenuItem";
-            this.sectoresToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
-            this.sectoresToolStripMenuItem.Text = "Sectores";
-            // 
-            // tiposDeSangreToolStripMenuItem
-            // 
-            this.tiposDeSangreToolStripMenuItem.Name = "tiposDeSangreToolStripMenuItem";
-            this.tiposDeSangreToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
-            this.tiposDeSangreToolStripMenuItem.Text = "Tipos de Sangre";
-            // 
-            // administracionToolStripMenuItem
-            // 
-            this.administracionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ciudadanosToolStripMenuItem,
-            this.colegiosElectoralesToolStripMenuItem,
-            this.toolStripSeparator8,
-            this.usuariosToolStripMenuItem});
-            this.administracionToolStripMenuItem.Name = "administracionToolStripMenuItem";
-            this.administracionToolStripMenuItem.Size = new System.Drawing.Size(123, 24);
-            this.administracionToolStripMenuItem.Text = "Administracion";
-            // 
-            // ciudadanosToolStripMenuItem
-            // 
-            this.ciudadanosToolStripMenuItem.Name = "ciudadanosToolStripMenuItem";
-            this.ciudadanosToolStripMenuItem.Size = new System.Drawing.Size(226, 26);
-            this.ciudadanosToolStripMenuItem.Text = "Ciudadanos";
-            // 
-            // usuariosToolStripMenuItem
-            // 
-            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(226, 26);
-            this.usuariosToolStripMenuItem.Text = "Usuarios";
-            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // toolStrip1
             // 
@@ -466,7 +491,7 @@ namespace DSFEBAPR2022.Win32
             this.newToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
             this.newToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(202, 26);
             this.newToolStripMenuItem.Text = "&Nuevo";
             // 
             // openToolStripMenuItem
@@ -475,7 +500,7 @@ namespace DSFEBAPR2022.Win32
             this.openToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(202, 26);
             this.openToolStripMenuItem.Text = "&Abrir";
             // 
             // saveToolStripMenuItem
@@ -484,7 +509,7 @@ namespace DSFEBAPR2022.Win32
             this.saveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(202, 26);
             this.saveToolStripMenuItem.Text = "&Save";
             // 
             // printToolStripMenuItem
@@ -493,7 +518,7 @@ namespace DSFEBAPR2022.Win32
             this.printToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
             this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(202, 26);
             this.printToolStripMenuItem.Text = "&Print";
             // 
             // printPreviewToolStripMenuItem
@@ -501,7 +526,7 @@ namespace DSFEBAPR2022.Win32
             this.printPreviewToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("printPreviewToolStripMenuItem.Image")));
             this.printPreviewToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.printPreviewToolStripMenuItem.Name = "printPreviewToolStripMenuItem";
-            this.printPreviewToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.printPreviewToolStripMenuItem.Size = new System.Drawing.Size(202, 26);
             this.printPreviewToolStripMenuItem.Text = "Print Pre&view";
             // 
             // cutToolStripMenuItem
@@ -531,23 +556,44 @@ namespace DSFEBAPR2022.Win32
             this.pasteToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
             this.pasteToolStripMenuItem.Text = "&Paste";
             // 
-            // colegiosElectoralesToolStripMenuItem
+            // ventanasToolStripMenuItem
             // 
-            this.colegiosElectoralesToolStripMenuItem.Name = "colegiosElectoralesToolStripMenuItem";
-            this.colegiosElectoralesToolStripMenuItem.Size = new System.Drawing.Size(226, 26);
-            this.colegiosElectoralesToolStripMenuItem.Text = "Colegios Electorales";
+            this.ventanasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cascadaToolStripMenuItem,
+            this.horizontalToolStripMenuItem,
+            this.verticalToolStripMenuItem,
+            this.iconosToolStripMenuItem});
+            this.ventanasToolStripMenuItem.Name = "ventanasToolStripMenuItem";
+            this.ventanasToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
+            this.ventanasToolStripMenuItem.Text = "Ventanas";
             // 
-            // toolStripSeparator8
+            // cascadaToolStripMenuItem
             // 
-            this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(223, 6);
+            this.cascadaToolStripMenuItem.Name = "cascadaToolStripMenuItem";
+            this.cascadaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.cascadaToolStripMenuItem.Text = "Cascada";
+            this.cascadaToolStripMenuItem.Click += new System.EventHandler(this.cascadaToolStripMenuItem_Click);
             // 
-            // cerrarSesiónToolStripMenuItem
+            // horizontalToolStripMenuItem
             // 
-            this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
-            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.cerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión";
-            this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
+            this.horizontalToolStripMenuItem.Name = "horizontalToolStripMenuItem";
+            this.horizontalToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.horizontalToolStripMenuItem.Text = "Horizontal";
+            this.horizontalToolStripMenuItem.Click += new System.EventHandler(this.horizontalToolStripMenuItem_Click);
+            // 
+            // verticalToolStripMenuItem
+            // 
+            this.verticalToolStripMenuItem.Name = "verticalToolStripMenuItem";
+            this.verticalToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.verticalToolStripMenuItem.Text = "Vertical";
+            this.verticalToolStripMenuItem.Click += new System.EventHandler(this.verticalToolStripMenuItem_Click);
+            // 
+            // iconosToolStripMenuItem
+            // 
+            this.iconosToolStripMenuItem.Name = "iconosToolStripMenuItem";
+            this.iconosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.iconosToolStripMenuItem.Text = "Iconos";
+            this.iconosToolStripMenuItem.Click += new System.EventHandler(this.iconosToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -631,5 +677,10 @@ namespace DSFEBAPR2022.Win32
         private System.Windows.Forms.ToolStripMenuItem colegiosElectoralesToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
         private System.Windows.Forms.ToolStripMenuItem cerrarSesiónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ventanasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cascadaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem horizontalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem verticalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem iconosToolStripMenuItem;
     }
 }
