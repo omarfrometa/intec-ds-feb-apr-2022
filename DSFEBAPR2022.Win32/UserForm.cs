@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace DSFEBAPR2022.Win32
 {
-    public partial class UserForm : Form
+    public partial class UserForm : Form, MyInterface
     {
         DSFEBAPR2022.BO.DSFEBABR2022Entities db = new BO.DSFEBABR2022Entities();
         public bool Adding { get; set; }
@@ -160,6 +160,26 @@ namespace DSFEBAPR2022.Win32
                     }
                 }
             }
+        }
+
+        public void Save()
+        {
+            save();
+        }
+
+        public void Cut()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Copy()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Paste()
+        {
+            throw new NotImplementedException();
         }
     }
 }

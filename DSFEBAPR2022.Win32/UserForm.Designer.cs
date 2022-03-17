@@ -30,28 +30,28 @@ namespace DSFEBAPR2022.Win32
         private void InitializeComponent()
         {
             this.gbDatos = new System.Windows.Forms.GroupBox();
+            this.txtPasswordConfirm = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtCreatedDate = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.chkEnabled = new System.Windows.Forms.CheckBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dgvRecords = new System.Windows.Forms.DataGridView();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.chkEnabled = new System.Windows.Forms.CheckBox();
-            this.txtCreatedDate = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtPasswordConfirm = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.dgvRecords = new System.Windows.Forms.DataGridView();
             this.gbDatos.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRecords)).BeginInit();
@@ -80,6 +80,116 @@ namespace DSFEBAPR2022.Win32
             this.gbDatos.TabStop = false;
             this.gbDatos.Text = "Datos";
             // 
+            // txtPasswordConfirm
+            // 
+            this.txtPasswordConfirm.Location = new System.Drawing.Point(139, 127);
+            this.txtPasswordConfirm.Name = "txtPasswordConfirm";
+            this.txtPasswordConfirm.Size = new System.Drawing.Size(206, 22);
+            this.txtPasswordConfirm.TabIndex = 12;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(14, 130);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(112, 17);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Confirmar Clave:";
+            // 
+            // txtID
+            // 
+            this.txtID.Enabled = false;
+            this.txtID.Location = new System.Drawing.Point(139, 25);
+            this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
+            this.txtID.Size = new System.Drawing.Size(206, 22);
+            this.txtID.TabIndex = 10;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(94, 28);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(25, 17);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "ID:";
+            // 
+            // txtCreatedDate
+            // 
+            this.txtCreatedDate.Enabled = false;
+            this.txtCreatedDate.Location = new System.Drawing.Point(139, 227);
+            this.txtCreatedDate.Name = "txtCreatedDate";
+            this.txtCreatedDate.ReadOnly = true;
+            this.txtCreatedDate.Size = new System.Drawing.Size(206, 22);
+            this.txtCreatedDate.TabIndex = 8;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(14, 228);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(111, 17);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Fecha Creacion:";
+            // 
+            // chkEnabled
+            // 
+            this.chkEnabled.AutoSize = true;
+            this.chkEnabled.Location = new System.Drawing.Point(139, 197);
+            this.chkEnabled.Name = "chkEnabled";
+            this.chkEnabled.Size = new System.Drawing.Size(78, 21);
+            this.chkEnabled.TabIndex = 6;
+            this.chkEnabled.Text = "Inactivo";
+            this.chkEnabled.UseVisualStyleBackColor = true;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(139, 165);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(206, 22);
+            this.txtEmail.TabIndex = 5;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(79, 170);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(46, 17);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Email:";
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(139, 90);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(206, 22);
+            this.txtPassword.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(72, 93);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 17);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Clave:";
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Location = new System.Drawing.Point(139, 53);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(206, 22);
+            this.txtUsername.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(64, 58);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 17);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Usuario:";
+            // 
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(11, 12);
@@ -99,6 +209,7 @@ namespace DSFEBAPR2022.Win32
             this.btnSave.TabIndex = 1;
             this.btnSave.Text = "Guardar";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Visible = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnDelete
@@ -123,6 +234,21 @@ namespace DSFEBAPR2022.Win32
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Registros";
+            // 
+            // dgvRecords
+            // 
+            this.dgvRecords.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvRecords.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRecords.Location = new System.Drawing.Point(3, 18);
+            this.dgvRecords.Name = "dgvRecords";
+            this.dgvRecords.RowHeadersWidth = 51;
+            this.dgvRecords.RowTemplate.Height = 24;
+            this.dgvRecords.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvRecords.Size = new System.Drawing.Size(849, 539);
+            this.dgvRecords.TabIndex = 0;
+            this.dgvRecords.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRecords_CellClick);
             // 
             // btnSearch
             // 
@@ -160,131 +286,6 @@ namespace DSFEBAPR2022.Win32
             this.btnCancel.Text = "Cancelar";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(64, 58);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 17);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Usuario:";
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.Location = new System.Drawing.Point(139, 53);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(206, 22);
-            this.txtUsername.TabIndex = 1;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Location = new System.Drawing.Point(139, 90);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(206, 22);
-            this.txtPassword.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(72, 93);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 17);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Clave:";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(139, 165);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(206, 22);
-            this.txtEmail.TabIndex = 5;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(79, 170);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 17);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Email:";
-            // 
-            // chkEnabled
-            // 
-            this.chkEnabled.AutoSize = true;
-            this.chkEnabled.Location = new System.Drawing.Point(139, 197);
-            this.chkEnabled.Name = "chkEnabled";
-            this.chkEnabled.Size = new System.Drawing.Size(78, 21);
-            this.chkEnabled.TabIndex = 6;
-            this.chkEnabled.Text = "Inactivo";
-            this.chkEnabled.UseVisualStyleBackColor = true;
-            // 
-            // txtCreatedDate
-            // 
-            this.txtCreatedDate.Enabled = false;
-            this.txtCreatedDate.Location = new System.Drawing.Point(139, 227);
-            this.txtCreatedDate.Name = "txtCreatedDate";
-            this.txtCreatedDate.ReadOnly = true;
-            this.txtCreatedDate.Size = new System.Drawing.Size(206, 22);
-            this.txtCreatedDate.TabIndex = 8;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(14, 228);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 17);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Fecha Creacion:";
-            // 
-            // txtID
-            // 
-            this.txtID.Enabled = false;
-            this.txtID.Location = new System.Drawing.Point(139, 25);
-            this.txtID.Name = "txtID";
-            this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(206, 22);
-            this.txtID.TabIndex = 10;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(94, 28);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(25, 17);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "ID:";
-            // 
-            // txtPasswordConfirm
-            // 
-            this.txtPasswordConfirm.Location = new System.Drawing.Point(139, 127);
-            this.txtPasswordConfirm.Name = "txtPasswordConfirm";
-            this.txtPasswordConfirm.Size = new System.Drawing.Size(206, 22);
-            this.txtPasswordConfirm.TabIndex = 12;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(14, 130);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(112, 17);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Confirmar Clave:";
-            // 
-            // dgvRecords
-            // 
-            this.dgvRecords.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvRecords.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRecords.Location = new System.Drawing.Point(3, 18);
-            this.dgvRecords.Name = "dgvRecords";
-            this.dgvRecords.RowHeadersWidth = 51;
-            this.dgvRecords.RowTemplate.Height = 24;
-            this.dgvRecords.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRecords.Size = new System.Drawing.Size(849, 539);
-            this.dgvRecords.TabIndex = 0;
-            this.dgvRecords.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRecords_CellClick);
             // 
             // UserForm
             // 

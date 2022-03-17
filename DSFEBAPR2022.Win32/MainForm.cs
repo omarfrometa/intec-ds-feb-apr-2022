@@ -66,5 +66,14 @@ namespace DSFEBAPR2022.Win32
         {
             this.LayoutMdi(MdiLayout.ArrangeIcons);
         }
+
+        private void saveToolStripButton_Click(object sender, EventArgs e)
+        {
+            var formControl = (Form)ActiveMdiChild;
+            if (formControl != null)
+            {
+                ((MyInterface)formControl).Save();
+            }
+        }
     }
 }
